@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:scoped_model/scoped_model.dart';
-import 'package:scopedmodelprac/enums/view_states.dart';
 
+import 'package:scopedmodelprac/enums/view_states.dart';
 import 'package:scopedmodelprac/scoped_models/home_model.dart';
-import 'package:scopedmodelprac/service_locator.dart';
 import 'package:scopedmodelprac/ui/base_view.dart';
 
 class HomeView extends StatelessWidget {
