@@ -4,28 +4,26 @@ import 'package:scopedmodelprac/enums/view_states.dart';
 
 import 'package:scopedmodelprac/scoped_models/home_model.dart';
 import 'package:scopedmodelprac/service_locator.dart';
+import 'package:scopedmodelprac/ui/base_view.dart';
 
 class HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return ScopedModel<HomeModel>(
-      model: locator<HomeModel>(),
-      child: ScopedModelDescendant<HomeModel>(
-        builder: (context, child, model) => Scaffold(
-          body: Center(
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
-              children: <Widget>[
-                _getBodyUI(model.state),
-                Text(model.title),
-              ],
-            ),
+    return BaseView<HomeModel>(
+      builder: (context, child, model) => Scaffold(
+        body: Center(
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: <Widget>[
+              _getBodyUI(model.state),
+              Text(model.title),
+            ],
           ),
-          floatingActionButton: FloatingActionButton(
-            onPressed: () {
-              model.saveData();
-            },
-          ),
+        ),
+        floatingActionButton: FloatingActionButton(
+          onPressed: () {
+            model.saveData();
+          },
         ),
       ),
     );
