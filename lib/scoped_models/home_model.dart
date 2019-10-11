@@ -24,7 +24,7 @@ class HomeModel extends Model {
     notifyListeners();
   }
 
-  void _setState(ViewState newState) { 
+  void _setState(ViewState newState) {
     _state = newState;
     notifyListeners();
   }
