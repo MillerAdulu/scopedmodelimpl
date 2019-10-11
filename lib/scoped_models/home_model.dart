@@ -1,4 +1,5 @@
 import 'package:scoped_model/scoped_model.dart';
+
 import 'package:scopedmodelprac/service_locator.dart';
 import 'package:scopedmodelprac/services/storage_service.dart';
 

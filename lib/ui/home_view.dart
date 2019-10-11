@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:scoped_model/scoped_model.dart';
+
 import 'package:scopedmodelprac/scoped_models/home_model.dart';
 import 'package:scopedmodelprac/service_locator.dart';
 
